@@ -1,4 +1,4 @@
-function Hamster = Hamming(F,G,H,Xtr_p,Xt_p,X_p) 
+function [Hamster,hamy] = Hamming(F,G,H,Xtr_p,Xt_p,X_p) 
 
 AD = 0; % Use asymmetric hashing or not
 
@@ -35,7 +35,6 @@ for j = 1:nbits
     w = ceil(j/8);
     less_bits(:,w) = bitset(less_bits(:,w), mod(j-1,8)+1, seq(:,j));
 end
-    
     
 end
 
